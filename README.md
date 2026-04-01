@@ -52,13 +52,13 @@ curl -s https://ifconfig.me
 
 打开 [微信开发者平台](https://developers.weixin.qq.com/platform?tab1=basicInfo\&tab2=dev)，点击首页的 **「前往使用」** 按钮登录。
 
-!\[步骤1：点击前往使用]\(.agents/skills/youmind-wechat-article/image/1.png)
+![步骤1：点击前往使用](https://raw.githubusercontent.com/kewab/miniature-parakeet/dfd18e3200af0c5e55fa39e9195eaf85d00f8468/.agents/skills/youmind-wechat-article/image/1.png )
 
 **第 2 步 — 选择公众号**
 
 在「我的业务」面板中，找到并点击 **「公众号」** 进入公众号管理页。
 
-!\[步骤2：点击公众号]\(.agents/skills/youmind-wechat-article/image/2.png)
+![步骤2：点击公众号](https://raw.githubusercontent.com/kewab/miniature-parakeet/dfd18e3200af0c5e55fa39e9195eaf85d00f8468/.agents/skills/youmind-wechat-article/image/2.png )
 
 **第 3 步 — 复制 AppID、AppSecret 并配置 IP 白名单**
 
@@ -68,7 +68,7 @@ curl -s https://ifconfig.me
 2. **AppSecret** — 「开发密钥」区域，点击 **重置** 获取（只展示一次，请立即保存），填入 `wechat.secret`
 3. **API IP 白名单** — 同一区域，点击 **编辑**，将你的公网 IP 粘贴进去
 
-!\[步骤3：AppID、AppSecret 和 IP 白名单位置]\(.agents/skills/youmind-wechat-article/image/3.png)
+![步骤3：AppID、AppSecret 和 IP 白名单位置](https://raw.githubusercontent.com/kewab/miniature-parakeet/dfd18e3200af0c5e55fa39e9195eaf85d00f8468/.agents/skills/youmind-wechat-article/image/3.png )
 
 ### 获取本机公网 IP
 
