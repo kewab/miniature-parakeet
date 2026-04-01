@@ -2,21 +2,21 @@
 
 微信公众号 AI Skill。对 Agent 说一句话，自动跑完选题、写作、配图、排版、发布到草稿箱。
 
----
+***
 
 ## 一句话能干嘛
 
-| 你说 | Skill 做 |
-|------|----------|
-| `给 demo 写一篇公众号文章` | 全自动 8 步：热点 → 选题 → 写作 → SEO → 配图 → 排版 → 发到草稿箱 |
-| `写一篇关于高考志愿的文章` | 跳过热点，直接围绕指定主题走流程 |
-| `把这篇 Markdown 发到草稿箱` | 跳过写作，直接排版发布 |
-| `用紫色 decoration 主题预览` | 换主题换色，即时预览 |
-| `看看最近 7 天文章表现` | 拉数据、分析 top/flop、给下一篇建议 |
-| `根据我的修改学习风格` | 从你的人工改稿中提取经验，下次写得更像你 |
-| `创建新客户 my-brand` | 自动建目录、引导填品牌配置 |
+| 你说                    | Skill 做                                      |
+| --------------------- | -------------------------------------------- |
+| `给 demo 写一篇公众号文章`     | 全自动 8 步：热点 → 选题 → 写作 → SEO → 配图 → 排版 → 发到草稿箱 |
+| `写一篇关于高考志愿的文章`        | 跳过热点，直接围绕指定主题走流程                             |
+| `把这篇 Markdown 发到草稿箱`  | 跳过写作，直接排版发布                                  |
+| `用紫色 decoration 主题预览` | 换主题换色，即时预览                                   |
+| `看看最近 7 天文章表现`        | 拉数据、分析 top/flop、给下一篇建议                       |
+| `根据我的修改学习风格`          | 从你的人工改稿中提取经验，下次写得更像你                         |
+| `创建新客户 my-brand`      | 自动建目录、引导填品牌配置                                |
 
----
+***
 
 ## 安装
 
@@ -36,13 +36,13 @@ curl -s https://ifconfig.me
 
 `config.yaml` 需要填写以下凭证：
 
-| 字段 | 必填 | 说明 |
-|------|------|------|
-| `wechat.appid` | **是** | 微信公众号 AppID |
-| `wechat.secret` | **是** | 微信公众号 AppSecret |
-| `wechat.author` | 否 | 文章作者名，默认 "YouMind" |
-| `youmind.api_key` | 推荐 | 用于知识库搜索、联网搜索、文章归档、AI 生图 → [获取 API Key](https://youmind.com/settings/api-keys?utm_source=youmind-wechat-article) |
-| `image.providers.*.api_key` | 否 | 配了哪个就启用哪个（youmind / gemini / openai / doubao） |
+| 字段                          | 必填    | 说明                                                                                                              |
+| --------------------------- | ----- | --------------------------------------------------------------------------------------------------------------- |
+| `wechat.appid`              | **是** | 微信公众号 AppID                                                                                                     |
+| `wechat.secret`             | **是** | 微信公众号 AppSecret                                                                                                 |
+| `wechat.author`             | 否     | 文章作者名，默认 "YouMind"                                                                                              |
+| `youmind.api_key`           | 推荐    | 用于知识库搜索、联网搜索、文章归档、AI 生图 → [获取 API Key](https://youmind.com/settings/api-keys?utm_source=youmind-wechat-article) |
+| `image.providers.*.api_key` | 否     | 配了哪个就启用哪个（youmind / gemini / openai / doubao）                                                                   |
 
 ### 获取 AppID / AppSecret / 配置 IP 白名单
 
@@ -50,15 +50,15 @@ curl -s https://ifconfig.me
 
 **第 1 步 — 进入微信开发者平台**
 
-打开 [微信开发者平台](https://developers.weixin.qq.com/platform?tab1=basicInfo&tab2=dev)，点击首页的 **「前往使用」** 按钮登录。
+打开 [微信开发者平台](https://developers.weixin.qq.com/platform?tab1=basicInfo\&tab2=dev)，点击首页的 **「前往使用」** 按钮登录。
 
-![步骤1：点击前往使用](image/1.png)
+!\[步骤1：点击前往使用]\(.agents/skills/youmind-wechat-article/image/1.png)
 
 **第 2 步 — 选择公众号**
 
 在「我的业务」面板中，找到并点击 **「公众号」** 进入公众号管理页。
 
-![步骤2：点击公众号](image/2.png)
+!\[步骤2：点击公众号]\(.agents/skills/youmind-wechat-article/image/2.png)
 
 **第 3 步 — 复制 AppID、AppSecret 并配置 IP 白名单**
 
@@ -68,7 +68,7 @@ curl -s https://ifconfig.me
 2. **AppSecret** — 「开发密钥」区域，点击 **重置** 获取（只展示一次，请立即保存），填入 `wechat.secret`
 3. **API IP 白名单** — 同一区域，点击 **编辑**，将你的公网 IP 粘贴进去
 
-![步骤3：AppID、AppSecret 和 IP 白名单位置](image/3.png)
+!\[步骤3：AppID、AppSecret 和 IP 白名单位置]\(.agents/skills/youmind-wechat-article/image/3.png)
 
 ### 获取本机公网 IP
 
@@ -100,7 +100,7 @@ curl -s https://httpbin.org/ip | python3 -c "import sys,json; print(json.load(sy
 
 > **提示**：拿到 IP 后，回到上面第 3 步的「API IP 白名单」→ 编辑，粘贴保存即可。
 
----
+***
 
 ## 使用技巧
 
@@ -113,12 +113,12 @@ curl -s https://httpbin.org/ip | python3 -c "import sys,json; print(json.load(sy
 
 4 款内置主题，搭配任意 HEX 色值：
 
-| 主题 | 风格 | 适合 |
-|------|------|------|
-| `simple` | 简约干净 | 日常推送、知识科普 |
-| `center` | 居中排版 | 短篇、金句、情感 |
-| `decoration` | 装饰线条 | 品牌感强的内容 |
-| `prominent` | 大标题 | 深度长文、观点输出 |
+| 主题           | 风格   | 适合        |
+| ------------ | ---- | --------- |
+| `simple`     | 简约干净 | 日常推送、知识科普 |
+| `center`     | 居中排版 | 短篇、金句、情感  |
+| `decoration` | 装饰线条 | 品牌感强的内容   |
+| `prominent`  | 大标题  | 深度长文、观点输出 |
 
 <!-- TODO: 主题对比截图 -->
 
@@ -147,10 +147,10 @@ node toolkit/dist/image-gen.js \
   --prompt "用于同一篇公众号文章配图，真实感，保留粉色涂鸦遮脸"
 ```
 
-可选模块覆盖参数：`--scene` `--style` `--outfit` `--light`。  
-可选姿势/元素参数：`--pose` `--element`。  
-可选历史参数：`--history-file`（默认 `clients/{client}/history_images.json`，用于近 30 天去重）。  
-可选文章参数：`--article-id`（同一篇文章多张图建议传同一个 id）。  
+可选模块覆盖参数：`--scene` `--style` `--outfit` `--light`。\
+可选姿势/元素参数：`--pose` `--element`。\
+可选历史参数：`--history-file`（默认 `clients/{client}/history_images.json`，用于近 30 天去重）。\
+可选文章参数：`--article-id`（同一篇文章多张图建议传同一个 id）。\
 不传时将从内置素材库随机组合，固定保留人物一致性约束与遮脸规则。
 
 同一篇文章中，脚本会强制“姿势不重复”。如果你手动指定了重复姿势，会直接报错中断。
@@ -181,7 +181,7 @@ clients/demo/
 
 每一步都有 fallback。热点抓不到就联网搜，联网搜也挂就问你；图生不出来就搜图库；发布失败就生成本地 HTML。单步失败只会跳过并标注，不会卡死。
 
----
+***
 
 ## 常见问题
 
@@ -193,7 +193,7 @@ clients/demo/
 
 **怎么自定义排版？** — 三个层级：① 对话里指定颜色字号 → ② 写 Theme DSL JSON → ③ 搭配设计类 Skill 深度定制。
 
----
+***
 
 ## 许可证
 
